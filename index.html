@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Better Windsurfing Club</title>
+    <style>
+      h1 {
+        margin: 15px 15px;
+        text-align: center;
+      }
+      h2 {
+        border: 1px solid #464761;
+        border-radius: 4px;
+        display: block;
+        font-size: 18px;
+        max-width: 400px;
+        margin: 0 auto 20px;
+        padding: 18px 10px;
+        text-align: center;
+      }
+      img {
+        border-radius: 6px;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 400px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 10px 0;
+        padding: 10px 0;
+      }
+      button {
+        background: #464761;
+        border: 1.5px solid #464761;
+        border-radius: 6px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        color: white;
+        display: block;
+        font-size: 18px;
+        margin: 0 auto;
+        padding: 15px 30px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background-color: white;
+        color: #464761;
+        cursor: pointer;
+        font-weight: bolder;
+      }
+      .container {
+        background-image: linear-gradient(
+          179.7deg,
+          rgb(197, 214, 227) 2.9%,
+          rgb(144, 175, 202) 97.1%
+        );
+        border-radius: 10px;
+        color: #464761;
+        font-family: Arial, Helvetica, sans-serif;
+        max-width: 550px;
+        margin: 20px auto;
+        padding: 10px 20px;
+      }
+      .learn-more {
+        color: #464761;
+        display: block;
+        font-size: 14px;
+        margin-top: 10px;
+        text-decoration: none;
+      }
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        font-size: 13px;
+        text-align: center;
+      }
+      .bio {
+        color: #5a5e79;
+        text-decoration: none;
+      }
+      .bio:hover {
+        font-weight: bolder;
+        text-decoration: underline;
+      }
+      .club-name {
+        color: #4b8b94;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>WINDSURFING</h1>
+      <h2>A sport for people of all ages and abilities!</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/506/original/BB9Q1808.jpg?1666987770"
+        alt="Windsurfer in Ireland"
+      />
+      <hr />
+      <p>
+        Invented in California in the late 1960s by Jim Drake, windsurfing is a
+        wind propelled water sport that is a combination of sailing and surfing.
+        Windsurfing is a recreational, family friendly sport, most popular at
+        flat water locations around the world that offer safety and
+        accessibility for beginner and intermediate participants.
+        <br />
+        <a
+          class="learn-more"
+          href="https://en.wikipedia.org/wiki/Windsurfing"
+          target="_blank"
+        >
+          <strong>Learn more on Wikipedia</strong>
+        </a>
+      </p>
+      <hr />
+    </div>
+    <div class="container">
+      <p>
+        At <span class="club-name">Better Windsurfing Club</span> we can offer
+        classes and training to people of <em>all ages and levels</em>. Sign up
+        today to start your windsurfing journey with
+        <span class="club-name">Better Windsurfing Club</span>.
+      </p>
+      <br />
+      <button class="startButton">Start Windsurfing Now</button>
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.linkedin.com/in/sarah-barter-6383b196/"
+          target="_blank"
+          class="bio"
+        >
+          Sarah Barter</a
+        >
+      </p>
+    </div>
+    <script>
+      function start() {
+        let name = prompt("What's your name?");
+        let email = prompt("What's your email address?");
+        let age = prompt("How old are you?");
+
+        if (age >= 18) {
+          alert(
+            "Thank you, " + name + "! We'll be in touch by email soon! 👌👌"
+          );
+        } else {
+          alert(
+            "Thank you, " +
+              name +
+              "! Ask your mum or dad to get in touch with us so you can go windsurfing! 🤙🤙"
+          );
+        }
+      }
+      let startButton = document.querySelector(".startButton");
+      startButton.addEventListener("click", start);
+    </script>
+  </body>
+</html>
